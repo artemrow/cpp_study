@@ -1,0 +1,19 @@
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+using namespace std;
+
+int main ()
+{
+int a,b,c,d;
+double p;
+cout << "Koordinati pervoi tochki:";
+cin >>a;
+cin >>b;
+cout << "Koordinati vtoroi tochki:";
+cin >> c;
+cin >> d;
+p=sqrt((pow(c-a,2))+(pow(d-b,2)));
+cout << "Rasstoynie mezhdu nimi:"<<p;
+return 0;
+}
