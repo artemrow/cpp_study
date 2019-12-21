@@ -1,0 +1,14 @@
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+using namespace std;
+
+int main ()
+{
+int p, s;
+cout << "vvedite ploshad kvadrata s:";
+cin >>s;
+p=(sqrt(s))/4;
+cout << "p=" <<p;
+return 0;
+}
