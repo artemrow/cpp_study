@@ -1,0 +1,13 @@
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+using namespace std;
+
+int main ()
+{
+int a;
+cout << "vvedite chislo:";
+cin >> a;
+(a%10==7) ? cout << "Okanchivaetsy na 7" : cout << "Ne okanchivaetsy";
+return 0;
+}
