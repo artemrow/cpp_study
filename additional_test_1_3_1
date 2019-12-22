@@ -1,0 +1,13 @@
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+using namespace std;
+
+int main ()
+{
+int a,b;
+cout << "vvedite dva chisla:";
+cin >> a >> b;
+(a>b) ? cout << "max chislo:"<< a: cout << "max chislo:"<<b;
+return 0;
+}
