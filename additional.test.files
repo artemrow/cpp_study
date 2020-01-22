@@ -1,0 +1,27 @@
+#include <string>
+#include <fstream>
+#include <iostream>
+using namespace std;
+
+int main()
+{
+ofstream fout;
+fout.open("Tema.txt");
+for (int i=0; i<5; i++)
+{
+	cout << "SOBAKA" << endl;
+}
+fout.close();
+
+string line;
+ifstream iout("Tema.txt");
+if (!iout.is_open())
+{
+	cout << "No";
+}
+else
+{
+	while (getline(iout, line));
+	cout << line <<endl;
+}
+}
