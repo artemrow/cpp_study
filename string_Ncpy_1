@@ -1,0 +1,14 @@
+#include <iostream>
+#include <string>
+#include <cstring>
+#include <iomanip>
+using namespace std;
+int main()
+{
+char s1[10];
+cin.getline(s1,10);
+char s2[10];
+cin.getline(s2,10);
+cout << strncpy(s1, s2, 2);
+return 0;
+}
