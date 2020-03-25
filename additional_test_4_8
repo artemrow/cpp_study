@@ -1,0 +1,28 @@
+#include <iostream>
+#include <string>
+#include <cstring>
+#include <iomanip>
+#include <cmath>
+#include <cctype>
+using namespace std;
+int main()
+{
+    string s;
+    getline(cin,s);
+    int i,cur,sum = 0;
+
+    for(i=0;i<s.length();i++)
+    {   if(s[i]=='-')
+        {   s.insert(i,1,' ');
+            i++;
+        }
+        else if(s[i]=='+')
+        s[i]=' ';
+    }
+    istringstream ist(s);
+    while(ist>>cur)
+        sum+=cur;
+    cout<<"Sum= "<<sum<<"\n";
+    cin.get();
+	return 0;
+}
