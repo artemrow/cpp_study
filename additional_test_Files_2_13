@@ -1,0 +1,31 @@
+#include <iostream>
+#include <fstream>
+using namespace std;
+int main()
+{
+ifstream iout("C:\\SFML\\SFML-2.5.1\\include\\SFML\\FileT.txt");
+ofstream fout("C:\\SFML\\SFML-2.5.1\\include\\SFML\\GileT.txt");
+int s;
+while (iout.peek()!=EOF)
+{
+iout >> s;
+if (s<0)
+{
+	fout << s << "\t";
+}
+}
+iout.clear();
+iout.seekg(0);
+fout << endl;
+while (iout.peek()!=EOF)
+{
+	iout >> s;
+	if (s>0)
+	{
+		fout << s << "\t";
+	}
+}
+iout.close();
+fout.close();
+ return 0;
+}
