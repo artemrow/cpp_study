@@ -1,0 +1,65 @@
+#include <iostream>
+#include <cmath>
+#include <fstream>
+#include <iomanip>
+using namespace std;
+ifstream in("C:\\SFML\\SFML-2.5.1\\include\\SFML\\input.txt");
+ofstream out;
+struct sotr
+{
+	int money, year, experience;
+	char F[12], I[12], O[12], post[50];
+	void show();
+	void print();
+	void printf();
+};
+void sotr::show()
+{
+	cout <<setw(12)<<F<<setw(12)<<I<<setw(12)<<O<<setw(14)<<post<<setw(14)<<experience<<setw(8)<<year<<setw(8)<<money<<endl;
+}
+void sotr::print()
+{
+	cout <<setw(12)<<F<<setw(12)<<I<<setw(12)<<O<<setw(14)<<post<<setw(14)<<experience<<setw(8)<<year<<setw(8)<<money<<endl;
+}
+void sotr::printf()
+{
+	out <<setw(12)<<F<<setw(12)<<I<<setw(12)<<O<<setw(14)<<post<<setw(14)<<experience<<setw(8)<<year<<setw(8)<<money<<endl;
+}
+int main()
+{
+	sotr sotrudnik[25];
+	int money;
+	int n=0;
+	if (!in)cout<<"Error";
+	else
+	{
+		while(in.peek()!=EOF)
+		{
+			in>>sotrudnik[n].F;
+			in>>sotrudnik[n].I;
+			in>>sotrudnik[n].O;
+			in>>sotrudnik[n].post;
+			in>>sotrudnik[n].experience;
+			in>>sotrudnik[n].year;
+			in>>sotrudnik[n].money;
+			sotrudnik[n].show();
+			n++;
+		}
+	}
+		cout << "money=";
+		cin >> money;
+		out.open("C:\\SFML\\SFML-2.5.1\\include\\SFML\\output.txt");
+		if (out.is_open())
+		{
+			for (int i=0; i<n; i++)
+			{
+				if(sotrudnik[i].money<=money)
+				{
+					sotrudnik[i].print();
+					sotrudnik[i].printf();
+				}
+			}
+		}
+	in.close(); out.close();
+	return 0;
+}
