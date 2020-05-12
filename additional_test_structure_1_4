@@ -1,0 +1,55 @@
+#include <iostream>
+#include <fstream>
+#include <iomanip>
+#include <iostream>
+#include <string>
+#include <cstring>
+#include <cmath>
+#include <cctype>
+using namespace std;
+struct Point
+{
+	double x, y;
+};
+double distance(Point point)
+{
+	return sqrt((point.x*point.x)+(point.y*point.y));
+}
+void show(Point point)
+{
+	cout <<"tochki: "<< endl;
+	cout << "x="<< point.x << "\t";
+	cout << "y="<< point.y << endl;
+}
+Point pointcin()
+{
+	Point b;
+	cin >> b.x >> b.y;
+	return b;
+}
+int main()
+{
+int n;
+cout << "Kol-vo tochek=";
+cin >> n;
+Point a[n];
+for (int i=0; i<n; i++)
+{
+cout << "vvedite koordinaty " << i+1 << " tochki=";
+a[i]=pointcin();
+}
+double mindistance = distance(a[0]);
+Point minpoint = a[0];
+for (int i=0; i<n; i++)
+{
+	if (distance(a[i])<mindistance)
+	{
+     mindistance=distance(a[i]);
+	 minpoint=(a[i]);
+	}
+}
+cout << "mindistance="<< mindistance << endl;
+cout << "U ";
+show (minpoint);
+return 0;
+}
