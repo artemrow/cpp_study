@@ -8,6 +8,14 @@ int nod(int x)
 			++count;
 	return count+1;
 }
+int nok(int x)
+{
+	int count = 0;
+	for (int i=-1; i>=x/2; i--)
+		if (x%i ==0)
+			++count;
+	return count+1;
+}
 int main ()
 {
 	int a,b,x;
@@ -16,7 +24,7 @@ int main ()
 	cin >> x;
 	for (int i=a; i<=b; i++)
 	{
-		if (nod(i)==x)
+		if (nod(i)==x||nok(i)==x)
 		{
 			cout << i;
 		}
