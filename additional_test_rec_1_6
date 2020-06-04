@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+int nod(int x)
+{
+	int count = 0;
+	for (int i=1; i<=x/2; i++)
+		if (x%i ==0)
+			++count;
+	return count+1;
+}
+int main ()
+{
+	int a,b,x;
+	cin >> a >> b;
+	cout <<"x=";
+	cin >> x;
+	for (int i=a; i<=b; i++)
+	{
+		if (nod(i)==x)
+		{
+			cout << i;
+		}
+	}
+return 0;
+}
