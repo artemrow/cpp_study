@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+int dd(int x)
+{
+	int count = 0;
+	for (int i=1; i<=abs(x/2); i++)
+		if (x%i ==0)
+			++count;
+	return count+1;
+}
+void sd(int a, int b, int x)
+{
+	if (a<=b)
+	{
+		if (dd(a)==x)
+		cout << a << endl;
+		sd (a+1, b, x);
+	}
+}
+int main ()
+{
+	int a,b,x;
+	cin >> a >> b;
+	cout <<"x=";
+	cin >> x;
+	sd(a,b,x);
+return 0;
+}
