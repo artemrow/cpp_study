@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+void lunaticks(int i)
+{
+	cout << i <<" lunaticov jili Ha Lune"<< endl;
+	cout << i <<" lunaticov vorochalic vo sne"<< endl;
+	cout << " Odin is lunaticov upal s luni vo sne"<< endl;
+	i--;
+	if (i!=0)
+	{
+		cout << i << " Lunaticov ostaloc na Lune"<< endl;
+	lunaticks(i);
+	}
+	else
+	cout << "I bolshe Lunatikov HE octaloc Ha Lune";
+}
+int main ()
+{
+int i=10;
+lunaticks(i);
+	return 0;
+}
